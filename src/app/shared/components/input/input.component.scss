@@ -1,0 +1,28 @@
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  background: #ffffff;
+
+  border: 1px solid #c1d6e9;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.input-with-label {
+  margin-top: 15px;
+}
+
+.label {
+  position: absolute;
+  z-index: 2;
+  bottom: 57px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.container {
+  position: relative;
+  width: 100%;
+}

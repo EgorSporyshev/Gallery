@@ -1,0 +1,141 @@
+.space {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(
+      //to right bottom,
+      rgba(76, 216, 255, 0.8),
+      rgba(30, 108, 217, 0.8)
+    ),
+    url("https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg");
+
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+.tabl {
+  background: #c1d6e9;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute; /* Элемент с абсолютным позиционированием удаляется из нормального потока,
+        другие элементы, расположенные в коде после него, смещаются на веб-странице на его место.*/
+  margin-top: 80px;
+  text-align: left;
+  border: 2px solid #9fb4fc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+  font-size: 16px;
+  background: #ffffff;
+  padding: 10px 15px;
+  /* Dark / Variant 5 */
+
+  border: 1px solid #c1d6e9;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+h3 {
+  margin-left: 300px;
+  font-size: 20px;
+}
+
+p {
+  color: #182f43;
+}
+.option-input {
+  appearance: none;
+  position: relative;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  transition: all 0.15s ease-out 0s;
+  background: #aec2d4;
+  border: none;
+  color: #3F68FA;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #87919c;
+}
+.option-input:checked {
+  background: white;
+}
+.option-input:checked::before {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  content: "⦿";
+  display: inline-block;
+  font-size: 25px;
+  text-align: center;
+  line-height: 20px;
+  bottom: 2px;
+  right: 1.90px;
+}
+.option-input:checked::after {
+  background: #87919c;
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+
+}
+.card-image {
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 40%;
+  background-image: url("https://cs6.pikabu.ru/post_img/2017/07/02/7/og_og_1498990948224358595.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 5%;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.card-heading {
+  position: absolute;
+  left: 5%;
+  top: 75%;
+  right: 5%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  font-style: oblique;
+  line-height: 1.222;
+}
+.icon{
+  position: absolute;
+  top:307px;
+  left:43px;
+}
+.form-help-text{
+  bottom:36px;
+  position:absolute;
+  right:40px;
+  color:red;
+}
+.buttons{
+  padding-top: 5px;
+}

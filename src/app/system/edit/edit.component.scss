@@ -1,0 +1,90 @@
+.space {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(76, 216, 255, 0.8),
+      rgba(30, 108, 217, 0.8)
+    ),
+    url("https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg");
+
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.centerText {
+  font-size: 23px;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  padding-bottom:10px;
+}
+
+/*форма*/
+form {
+  background: #c1d6e9;
+  margin-top: 150px;
+  width: 500px;
+  padding: 20px;
+  height: 400px;
+  border: 2px solid #9fb4fc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 35px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #c1d6e9;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 20px;
+  height: 40px;
+}
+.formtext {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.text {
+  color: black;
+  text-align: center;
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.container {
+  padding: 10px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.buttons {
+  padding-top:5px;
+  display: grid;
+  row-gap: 10px;
+}
+.icon{
+  position:absolute;
+  bottom:20px;
+  left:13px
+}
+.input-group{
+  position:relative;
+}

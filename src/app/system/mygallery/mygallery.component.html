@@ -1,0 +1,26 @@
+<app-headergaller></app-headergaller>
+<div class="space">
+  <div class="row">
+    <div class="buttons">
+      <app-button *ngFor="let filter of filters" [text]="filter.title" [buttonblue]="true"
+        [active]="currentFilter.value==filter.value" (click)="currentFilter=filter"></app-button>
+    </div>
+    <ul id="thumbnailsList">
+      <li *ngFor="let image of (visibleImages | imageFilter:currentFilter.value)">
+        <img [src]="concatUrl(image.url)" class="tn" width="200" height="150">
+        <p class="text">
+          {{image.caption}} </p>
+        <a [routerLink]="['/image', image.id]">
+          <img class="icon" src="https://img.icons8.com/material-outlined/24/000000/ophthalmology.png" />
+
+          <p class="source">
+            Кликните для увеличения
+          </p>
+        </a>
+
+      </li>
+
+    </ul>
+
+  </div>
+</div>

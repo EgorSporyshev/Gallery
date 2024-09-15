@@ -1,0 +1,97 @@
+{
+  "users": [
+    {
+      "email": "sema.lyubimtsev.04@mail.ru",
+      "password": "111111",
+      "fio": "Любимцев Семён Владимирович",
+      "datebirth": "24.02.2004",
+      "id": 2
+    },
+    {
+      "email": "Sanya777@mail.ru",
+      "password": "Sanya777",
+      "fio": "Саня",
+      "datebirth": "01.01.2001",
+      "id": 3
+    }
+  ],
+  "images": [
+    {
+      "url": "a0b53f84ca4c37b3f69e814cf95b885a",
+      "username": "Любимцев Семён Владимирович",
+      "category": "animal",
+      "caption": "бобёр",
+      "id": 8
+    },
+    {
+      "url": "e5c049acb51384c73459bf319e19f648",
+      "username": "Любимцев Семён Владимирович",
+      "category": "nature",
+      "caption": "Сакура",
+      "id": 10
+    },
+    {
+      "url": "c76a3139ce91d1c567128a3550138ebb",
+      "username": "Любимцев Семён Владимирович",
+      "category": "car",
+      "caption": "ВАЗ 2114",
+      "id": 11
+    },
+    {
+      "url": "3d71ee98d0ba2ad8d5e64c3b21223383",
+      "username": "Любимцев Семён Владимирович",
+      "category": "interior",
+      "caption": "Современный стиль оформления ",
+      "id": 12
+    },
+    {
+      "url": "9e5f3c236f770446035b45cda7736e48",
+      "username": "Саня",
+      "category": "animal",
+      "caption": "Медведь медоед",
+      "id": 13
+    },
+    {
+      "url": "63b67031cdd07f52a2c08cea8a511810",
+      "username": "Саня",
+      "category": "nature",
+      "caption": "Красота природы",
+      "id": 14
+    },
+    {
+      "url": "d4e82647369dd5e584127b59cf904850",
+      "username": "Саня",
+      "category": "human",
+      "caption": "Джейсон Стейтем",
+      "id": 15
+    },
+    {
+      "url": "c5be03467e761f1c2b6c53daa924ffe1",
+      "username": "Саня",
+      "category": "car",
+      "caption": "ВАЗ 2112 (купе)",
+      "id": 16
+    },
+    {
+      "url": "314cadba77c1397352f79247bf10ec9f",
+      "username": "Саня",
+      "category": "interior",
+      "caption": "Пример оформления детской комнаты ",
+      "id": 17
+    },
+    {
+      "url": "35842041bf0393960e878c60c6267842",
+      "username": "Любимцев Семён Владимирович",
+      "category": "human",
+      "caption": "Аниме девочка",
+      "id": 18
+    },
+    {
+      "url": "a5c12bbde03866d8a8fd8662c2a76e00",
+      "username": "Любимцев Семён Владимирович",
+      "category": "human",
+      "caption": "Крис Хемсворт",
+      "id": 19
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<div class="backgr">
+<div class="row">
+    <div class="col-md-12">
+        <div [ngStyle] = "{'background-image': 'url('+ concatUrl(image.url) +')'}" class="img-container">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Caption -->
+<div class="row">
+        <div class="col-md-12 caption-row">
+          <span id="caption">
+            {{ image.caption }}
+          </span>
+        </div>
+        <div class="routcont"><a routerLink="/system/gallery" routerLinkActive="active"> Обратно в галерею</a></div>
+</div>
+</div>

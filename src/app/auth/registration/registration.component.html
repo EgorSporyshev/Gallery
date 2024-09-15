@@ -1,0 +1,146 @@
+<div class="backgr">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="text">Регистрация</div>
+    <div class="container">
+      <div
+        class="form-group"
+        [ngClass]="{'has-error': form.get('email')?.invalid && form.get('email')?.touched}"
+      >
+        <div class="input-group">
+        <label><div class="formtext">Логин <span class="input-group"><i></i></span></div></label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Введите email"
+          formControlName="email"
+        >
+        <img class="icon" src="https://img.icons8.com/small/16/000000/secured-letter.png"/>
+        </div>
+        <span
+          class="form-help-text"
+          *ngIf="form.get('email')?.invalid && form.get('email')?.touched"
+        >
+          <span *ngIf="form.get('email')?.errors?.required">Email не может быть пустым</span>
+          <span *ngIf="form.get('email')?.errors?.email">Введите корректный Email</span>
+          <span *ngIf="form.get('email')?.errors?.forbiddenEmail"> Email уже занят</span>
+        </span>
+      </div>
+  
+      <div
+        class="form-group"
+        [ngClass]="{'has-error': form.get('fio')?.invalid && form.get('fio')?.touched}"
+      >
+        <div class="input-group">
+        <label><div class="formtext">Ф.И.О.</div></label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Введите ф.и.о."
+          formControlName="fio"
+        >
+        <img class="icon" src="https://img.icons8.com/small/16/000000/priest.png"/>
+        </div>
+        <span
+          class="form-help-text"
+          *ngIf="form.get('fio')?.invalid && form.get('fio')?.touched"
+        >
+          <span *ngIf="form.get('fio')?.errors?.required">Ф.И.О. должно быть заполнено</span>
+        </span>
+      </div>
+  
+      <div
+        class="form-group"
+        [ngClass]="{'has-error': form.get('datebirth')?.invalid && form.get('datebirth')?.touched}"
+      >
+        <div class="input-group">
+        <label ><div class="formtext">Дата рождения</div></label>
+        <input
+          type="text"
+          placeholder="Введите дату рождения"
+          class="form-control"
+          formControlName="datebirth"
+        >
+        <img class="icon" src="https://img.icons8.com/small/16/000000/date-to.png"/>
+        </div>
+        <span
+          class="form-help-text"
+          *ngIf="form.get('datebirth')?.invalid && form.get('datebirth')?.touched"
+        >
+          <span *ngIf="form.get('datebirth')?.errors?.required">Дата рождения не может быть пустой</span>
+          <span *ngIf="form.get('datebirth')?.errors?.minlength && form.get('datebirth')?.errors?.minlength?.requiredLength">
+       Дата рождения должна быть больше {{form.get('datebirth')?.errors?.minlength?.requiredLength}}
+            символов. Сейчас {{form.get('datebirth')?.errors?.minlength?.actualLength}}.
+        </span>
+        </span>
+      </div>
+  
+      <div
+        class="form-group"
+        [ngClass]="{'has-error': form.get('password')?.invalid && form.get('password')?.touched}"
+      >
+        <div class="input-group">
+        <label for="psw"><div class="formtext">Пароль <span class="input-group"><i></i></span></div></label>
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Придумайте пароль"
+          formControlName="password"
+        >
+        <img class="icon" src="https://img.icons8.com/small/16/000000/lock.png"/>
+        </div>
+        <span
+          class="form-help-text"
+          *ngIf="form.get('password')?.invalid && form.get('password')?.touched"
+        >
+          <span *ngIf="form.get('password')?.errors?.required">Пароль не может быть пустым</span>
+          <span *ngIf="form.get('password')?.errors?.minlength && form.get('password')?.errors?.minlength?.requiredLength">
+        Пароль должен быть больше {{form.get('password')?.errors?.minlength?.requiredLength}}
+            символов. Сейчас {{form.get('password')?.errors?.minlength?.actualLength}}.
+        </span>
+        </span>
+      </div>
+  
+      <div
+        class="form-group"
+        [ngClass]="{'has-error': form.get('agree')?.invalid && form.get('agree')?.touched}"
+      >
+        <div class="input-group">
+  
+          <input
+            class="option-input checkbox"
+            
+            id="agree"
+            type="checkbox"
+            formControlName="agree"
+          >
+          <span class="agree">Согласен с обработкой персональных данных</span>
+        </div>
+        <span
+          class="form-help-text"
+          *ngIf="form.get('agree')?.invalid && form.get('agree')?.touched"
+        >
+          <span *ngIf="form.get('agree')?.errors?.required">Подтвердите согласие</span>
+        </span>
+      </div>
+      <div class="buttons">
+      <app-button
+        text="Зарегистрироваться"
+        type="submit"
+        [disabled]="form.invalid"
+        [buttonwhite]="true"
+        [fullwidth]="true"
+      >
+      </app-button>
+      <app-button
+      (click)="back()"
+        text="Назад"
+        type="submit"
+        [buttonblue]="true"
+        [fullwidth]="true"
+      >
+      </app-button></div>
+    </div>
+  
+  </form>
+</div>
+  

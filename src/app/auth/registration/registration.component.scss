@@ -1,0 +1,146 @@
+
+.backgr{    
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(76, 216, 255, 0.8),
+      rgba(30, 108, 217, 0.8)
+    ),
+    url("https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg");
+
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+form{ 
+  width: 430px;
+  padding: 25px 30px;
+  background: #c1d6e9;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 35px;
+    margin: 8px 0;
+    display: inline-block;
+    background: #FFFFFF;
+/* Dark / Variant 5 */
+
+border: 1px solid #C1D6E9;
+box-sizing: border-box;
+border-radius: 6px;
+    font-size: 15px;
+  }
+.container {
+    padding: 20px;
+  }
+  .formtext{
+    font-size:16px;
+    font-weight: bold;
+    color:black;
+  
+}
+  
+.text{
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+  p{
+    font-size: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #87aeaf;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  span {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .form-help-text {
+    font-size: 13px;
+    color:red;
+  font-weight: 300;
+  }
+  .icon{
+    position:absolute;
+    bottom:22px;
+    right:300px;
+  }
+  .input-group{
+    position:relative;
+  }
+  .agree{
+    font-size:14px;
+    font-weight:300;
+  }
+  
+  .option-input {
+    appearance: none;
+    position: relative;
+    top: 5px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    transition: all 0.15s ease-out 0s;
+    background: #aec2d4;
+    border: none;
+    color: #3F68FA;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+  }
+  .option-input:hover {
+    background: #87919c;
+  }
+  .option-input:checked {
+    background: white;
+  }
+  .option-input:checked::before {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    bottom:3px;
+    content: "🞑";
+    display: inline-block;
+    font-size: 22px;
+    text-align: center;
+    line-height: 22px;
+    bottom: 5px;
+    right: 1.8px;
+  }
+  .option-input:checked::after {
+    background: white;
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  .alert-danger{
+    font-size: 13px;
+    color:red;
+    font-weight: 300;
+  }
+  .buttons {
+    padding-top:5px;
+    display: grid;
+    row-gap: 10px;
+  }

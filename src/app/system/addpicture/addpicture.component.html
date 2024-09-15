@@ -1,0 +1,48 @@
+<div class="space">
+  <div class="tabl">
+    <div class="card-image">
+      <h2 class="card-heading">
+        Заполните информацию
+      </h2>
+    </div>
+    <img class="icon" src="https://img.icons8.com/officexs/16/000000/attach.png" />
+    <div class="buttons">
+      <app-button text="Выбрать файл" (click)="onOpenFileDialog()" [buttonwhite]="true" [buttonadd]="true"></app-button>
+    </div>
+    <input id="file-input" style="display: none" type="file" (change)="fileChange($event)" placeholder="Upload file" />
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="alert alert-{{massage.type}}" *ngIf="massage.text">
+        {{massage.text}}
+      </div>
+      <div class="form-group" [ngClass]="{'has-error': category?.invalid && category?.touched}">
+
+        <p>
+          <input type="radio" value="animal" name="category" ngModel #category="ngModel" required
+                 class="option-input radio"> Животное
+          <input type="radio" value="nature" name="category" ngModel #category="ngModel" required
+                 class="option-input radio"> Природа
+          <input type="radio" value="human" name="category" ngModel #category="ngModel" required
+                 class="option-input radio"> Люди
+          <input type="radio" value="car" name="category" ngModel #category="ngModel" required
+                 class="option-input radio"> Автомобили
+          <input type="radio" value="interior" name="category" ngModel #category="ngModel" required
+                 class="option-input radio"> Интерьер
+        </p>
+        <span *ngIf="category?.invalid && category?.touched">
+          <span>Поле обязательно для заполнения</span>
+        </span>
+      </div>
+      <div class="form-group" [ngClass]="{'has-error': caption?.invalid && caption?.touched}">
+        <textarea cols="80" rows="4" placeholder="Добавьте описание" ngModel name="caption" #caption="ngModel"
+          required></textarea>
+        <span *ngIf="caption?.invalid && caption?.touched">
+          <span class="form-help-text">Поле обязательно для заполнения</span>
+        </span>
+      </div>
+      <div class="buttons">
+        <app-button [buttonwhite]="true" text="Добавить картинку" type="submit" [disabled]="f.invalid"
+          style="font-size: 20px"></app-button>
+      </div>
+    </form>
+  </div>
+</div>

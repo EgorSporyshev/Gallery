@@ -1,0 +1,39 @@
+<header>
+  <nav class="main-menu">
+    <ul>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/system', 'gallery']"><img src="http://cdn.onlinewebfonts.com/svg/download_382193.png"
+            width="15" height="15" style="padding-right:5px">Галерея</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/system', 'project']">О нас</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/system', 'mygallery']">Мои картинки</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/system', 'addpicture']">Добавить картинку</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/system', 'personal']">Данные пользователя</a>
+      </li>
+
+      <li style="float:right">
+        <div class="shriftDrop">
+          <div class="profile dropdown" upDownDirective>
+            <a class="nav-link dropdown-toggle" role="button">
+              <span class="name">
+                Здравствуйте, {{user.fio}} &dtrif;
+              </span>
+            </a>
+            <div class="dropdown-menu profile-dropdown-menu">
+              <a class="dropdown-item" (click)="editProfile()">Изменить профиль</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="onLogout()">Выйти</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>

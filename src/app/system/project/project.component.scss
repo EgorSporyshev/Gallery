@@ -1,0 +1,33 @@
+.space {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(76, 216, 255, 0.8),
+      rgba(30, 108, 217, 0.8)
+    ),
+    url("https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg");
+
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+}
+p {
+  padding-bottom: 10px;
+  margin-left:100px;
+  margin-right:100px;
+  text-align: center;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: bold;
+  border-color: transparent;
+  color: #fff;
+  	text-transform: uppercase;
+
+  	backface-visibility: hidden;
+}
+

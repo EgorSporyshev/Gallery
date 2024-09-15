@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Segoe UI Regular';
+    src: url('assets/fonts/SegoeUI.eot');
+    src: url('assets/fonts/SegoeUI.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/SegoeUI.woff') format('woff'),
+    url('assets/fonts/SegoeUI.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+body{
+    margin: 0;
+    
+}
+a,a:visited,a:link,a:focus,a:hover,a:active{
+    color:blue;
+    text-decoration: none;
+}
+*{font-family: 'Segoe UI Regular';}

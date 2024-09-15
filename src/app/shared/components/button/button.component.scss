@@ -1,0 +1,40 @@
+button {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    border: none;
+    min-width:100px;
+    padding: 6px 24px;
+    
+  }
+.buttonblue:hover{
+    background:#4685BD;
+}
+  button[disabled]{
+    background-color: #aec2d4;
+    color: #666666;
+    border:none;
+  }
+  .buttonblue{
+      background: #3f68fa;
+      border-radius: 8px;
+      box-shadow: 0px 4px 4px 0px #00000040;
+      color: white;
+  }
+  .buttonwhite{
+      border: 1px solid #0F43F9;
+      box-sizing: border-box;
+      border-radius: 8px;
+      color: #0F43F9;
+      background: white;
+  }
+  .active {
+    background: #2E5A81;
+  }
+  .fullwidth{
+      width:100%;
+      margin-top:5px;
+  }
+  .buttonadd{
+    padding-left:35px;
+  }

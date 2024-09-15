@@ -1,0 +1,48 @@
+<div class="space">
+
+
+  <div class="alert alert-{{massage.type}}" *ngIf="massage.text">
+    {{massage.text}}
+  </div>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="centerText">Изменение информации пользователя</div>
+
+      <div class="input-group" [ngClass]="{'has-error': email?.invalid && email?.touched}">
+        <label for="uname">
+          <div class="formtext">Логин <span class="input-group"><i></i></span></div>
+        </label>
+        <input type="text" class="form-control" placeholder="Введите новый email" ngModel name="email" #email="ngModel"
+          required [ngModel]="currentUser.email">
+          <img class="icon" src="https://img.icons8.com/small/16/000000/secured-letter.png"/>
+      </div>
+      <span *ngIf="email?.invalid && email?.touched">
+        <span>
+          Поле обязательно для заполнения
+        </span>
+      </span>
+
+    <div class="form-group" [ngClass]="{'has-error': password?.invalid && password?.touched}">
+      <div class="input-group">
+        <label for="psw">
+          <div class="formtext">Пароль <span class="input-group"><i></i></span></div>
+        </label>
+        <input type="text" class="form-control" placeholder="Придумайте новый пароль" ngModel name="password"
+          #password="ngModel" required [ngModel]="currentUser.password">
+          <img class="icon" src="https://img.icons8.com/small/16/000000/lock.png"/>
+      </div>
+      <span class="form-help-text" *ngIf="password?.invalid && password?.touched">
+        <span>
+          Поле обязательно для заполнения
+        </span>
+      </span>
+    </div>
+    <div class="buttons">
+      <app-button type="submit" [disabled]="f.invalid" text="Изменить" [buttonblue]="true" [fullwidth]="true">
+      </app-button>
+
+      <app-button [buttonblue]="true" [fullwidth]="true" type="submit" text="Удалить аккаунт" (click)="delete()">
+      </app-button>
+    </div>
+  </form>
+</div>

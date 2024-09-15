@@ -1,0 +1,6 @@
+<div class="container">
+<label *ngIf="label" class="label">
+    <span>{{ label }}</span>
+</label>
+<input class="input" [value]="value" (input)="onInput($event)" [placeholder]="placeholder"
+    [class.input-with-label]="label" /></div>

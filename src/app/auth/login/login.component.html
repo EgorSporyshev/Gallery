@@ -1,0 +1,48 @@
+<div class="backgr">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="text">Авторизация</div>
+    <div class="container">
+      <div class="form-group" [ngClass]="{'has-error': form.get('email')?.invalid && form.get('email')?.touched}">
+        <div class="input-group">
+
+          <label for="pasw">
+            <div class="formtext">Логин <span><i></i></span></div>
+          </label>
+          <input type="text" placeholder="Логин" formControlName="email">
+          <img class="icon" src="https://img.icons8.com/small/16/000000/secured-letter.png" />
+        </div>
+        <div class="alert alert-{{massage.type}}" *ngIf="massage.text">
+          {{massage.text}}
+        </div>
+        <span class="form-help-text" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+          <span *ngIf="form.get('email')?.errors?.required"> Email не может быть пустым</span>
+          <span *ngIf="form.get('email')?.errors?.email"> Email не соответствует стандарту</span>
+        </span>
+      </div>
+      <div>
+        <div class="input-group">
+
+          <label for="psw">
+            <div class="formtext">Пароль <span><i></i></span></div>
+          </label>
+          <input type="password" placeholder="Введите пароль" formControlName="password">
+          <img class="icon" src="https://img.icons8.com/small/16/000000/lock.png" />
+        </div>
+        <span class="form-help-text" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+          <span *ngIf="form.get('password')?.errors?.required"> Пароль не может быть пустым</span>
+          <span
+            *ngIf="form.get('password')?.errors?.minlength && form.get('password')?.errors?.minlength?.requiredLength">
+            Пароль должен быть больше {{form.get('password')?.errors?.minlength?.requiredLength}}
+            символов. Сейчас {{form.get('password')?.errors?.minlength?.actualLength}}.
+          </span>
+        </span>
+      </div>
+      <div class="buttons">
+        <app-button text="Войти" type="submit" [disabled]="form.invalid" [buttonwhite]="true" [fullwidth]="true">
+        </app-button>
+      </div>
+      <p>Еще нет аккаунта?<a routerLink="/registration" routerLinkActive="active"> Зарегистрируйтесь</a></p>
+    </div>
+  </form>
+</div>
